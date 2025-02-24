@@ -19,4 +19,9 @@ private Store store;
     public List<Computer> getComputers() {
         return store.getComputers();
     }
+
+    public void removeComputer(String brand) {
+        store.getComputers().removeIf(c -> c.getBrand().equalsIgnoreCase(brand));
+    }
+
 }
