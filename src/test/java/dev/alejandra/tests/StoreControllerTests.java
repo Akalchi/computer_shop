@@ -6,8 +6,10 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import dev.alejandra.model.Store;
+
+import dev.alejandra.controller.StoreController;
 import dev.alejandra.model.Computer;
+import dev.alejandra.model.Store;
 
 public class StoreControllerTests {
     private StoreController controller;
