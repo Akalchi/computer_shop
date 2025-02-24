@@ -1,6 +1,7 @@
 package dev.alejandra.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.List;
 
@@ -39,6 +40,17 @@ public class StoreControllerTests {
         controller.removeComputer("HP Pavillion");
 
         assertEquals(0, controller.getComputers().size());
+    }
+
+    @Test
+    void testFindComputer() {
+        Computer computer = new Computer("HP Pavillion", 8, "Intel i7", "Windows 10", 800.0);
+        controller.addComputer(computer);
+
+        Computer found = controller.findComputer("HP Pavillion");
+
+        assertNotNull(found);
+        assertEquals("HP Pavillion", found.getBrand());
     }
 
 }
