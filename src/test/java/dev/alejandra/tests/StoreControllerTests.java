@@ -30,4 +30,15 @@ public class StoreControllerTests {
         List<Computer> computers = controller.getComputers();
         assertEquals(1, computers.size());
     }
+
+    @Test
+    void testRemoveComputer() {
+        Computer computer = new Computer("HP Pavillion", 8, "Intel i7", "Windows 10", 800.0);
+        controller.addComputer(computer);
+
+        controller.removeComputer("HP Pavillion");
+
+        assertEquals(0, controller.getComputers().size());
+    }
+
 }
