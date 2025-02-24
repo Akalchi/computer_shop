@@ -8,8 +8,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtensionContext.Store;
-
+import dev.alejandra.model.Store;
 import dev.alejandra.model.Computer;
 
 public class StoreTest {
