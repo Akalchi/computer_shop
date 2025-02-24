@@ -53,4 +53,15 @@ public class StoreControllerTests {
         assertEquals("HP Pavillion", found.getBrand());
     }
 
+    @Test
+    void testListComputers() {
+        Computer computer1 = new Computer("HP Pavillion", 8, "Intel i7", "Windows 10", 800.0);
+        Computer computer2 = new Computer("Lenovo", 16, "Intel i8", "Windows 11", 1200.0);
+
+        controller.addComputer(computer1);
+        controller.addComputer(computer2);
+
+        assertEquals(2, controller.getComputers().size());
+    }
+
 }
